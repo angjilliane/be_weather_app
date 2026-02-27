@@ -18,13 +18,14 @@ Requirements
 
 Installation & Setup
 - Clone this repository run
-    > git clone <repository-url>
+    > git clone [repository-url]
 
 - Go to project directory run
-    > cd <project-directory>
+    > cd [project-directory]
 - run "composer install"
 - run the ff. to clear applicaiton cache
     > "php artisan optimize:clear"
+    > 
     > "php artisan config:clear"
 - start the application run
     > "php artisan serve"
