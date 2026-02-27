@@ -32,6 +32,10 @@ return Application::configure(basePath: dirname(__DIR__))
     
         $exceptions->render(function (Throwable $e, $request) {
             if ($e instanceof ValidationException) {
+                return response()->json([
+                    'message' => 'Validation Error!',
+                    'error' => $e->getMessage(),
+                ], $e->getCode() ?: 503);
                 return null;
             }
 
@@ -39,24 +43,4 @@ return Application::configure(basePath: dirname(__DIR__))
                 'error' => 'Internal Server Error',
             ], 500);
         });
-
-
-       
-        // $exceptions->render(function (Throwable $e, $request) {
-        //     if ($e instanceof ValidationException) {
-        //         return response()->json([
-        //             'message' => 'Validation Error!',
-        //             'error' => $e->getMessage(),
-        //         ], $e->getCode() ?: 503);
-        //         return null;
-        //     }
-
-        //     return response()->json([
-        //         'error' => 'Internal Server Error',
-        //     ], 500);
-
-        //     return response()->json([
-        //         'error' => 'Internal Server Error',
-        //     ], 500);
-        // });
     })->create();
