@@ -1,8 +1,8 @@
 Weather API Application
  
-    This is a Laravel-based backend API that provides weather information using the third-party **OpenWeatherMap API**.
+This is a Laravel-based backend API that provides weather information using the third-party **OpenWeatherMap API**.
 
-    The application supports:
+   The application supports:
     - Real-time weather fetching
     - Cached weather responses
     - Input validation
@@ -30,7 +30,7 @@ Installation & Setup
     > "php artisan serve"
 
 - Postman setup 
-    > in project root path find and import postman collection "be-weather-app.postman_collection.json"
+    - in project root path find and import postman collection "be-weather-app.postman_collection.json"
     > set enviroment variable base_url with a value in which the laravel app serves e.g [http://127.0.0.1:8000]
 
 - Configure Environment
@@ -47,37 +47,41 @@ Installation & Setup
     > "php artisan test"
 
 
-API Endpoints:
-    GET /weather/{city}
+API Endpoints
+
+    
+- GET /weather/{city}
         - Fetch real-time weather data from the OpenWeatherMap API. 
             * Note refer to Other References:City name ISO for valid city parameter value
         - Response body property data types
-        
-            {
+
+             
+             {
                 "city": "string",
                 "temperature": "decimal",
                 "weather_description": "string",
                 "timestamp": "Y-m-d H:i:s",
                 "source": "external"
-            }
-        
+             }
 
-    GET /weather/{city}/cached
+- GET /weather/{city}/cached
         - Fetch cache weather data or real-time weather data from the OpenWeatherMap API.
         - Response body property data types
             
-            {
+         {
                 "city": "string",
                 "temperature": "decimal",
                 "weather_description": "string",
                 "timestamp": "Y-m-d H:i:s",
                 "source": "external | cache"
-            }
+         }
+
 
 External References
-    - OpenWeatherMapp 
-        site: https://api.openweathermap.org/
-        documentation: https://openweathermap.org/current
-    - City name ISO
-        site: https://www.iso.org/obp/ui/#search
-        note: select country then use "subdivision name" as city name
+
+- OpenWeatherMapp 
+    - Site: https://api.openweathermap.org/
+    - Documentation: https://openweathermap.org/current
+- City name ISO
+    - Site: https://www.iso.org/obp/ui/#search
+        -  select country then use "subdivision name" as city name
