@@ -1,6 +1,6 @@
 Weather API Application
  
-This is a Laravel-based backend API that provides weather information using the third-party **OpenWeatherMap API**.
+This is a Laravel-based(Laravel 12) backend API that provides weather information using the third-party **OpenWeatherMap API**.
 
    The application supports:
     - Real-time weather fetching
