@@ -51,9 +51,10 @@ API Endpoints
 
     
 - GET /weather/{city}
-        - Fetch real-time weather data from the OpenWeatherMap API. 
-            * Note refer to Other References:City name ISO for valid city parameter value
-        - Response body property data types
+  - Fetch real-time weather data from the OpenWeatherMap API. 
+          Refer to External References: City name ISO for valid city parameter value
+  - Response body property data types
+  
 
              
              {
@@ -65,16 +66,17 @@ API Endpoints
              }
 
 - GET /weather/{city}/cached
-        - Fetch cache weather data or real-time weather data from the OpenWeatherMap API.
-        - Response body property data types
-            
-         {
+    - Fetch cache weather data or real-time weather data from the OpenWeatherMap API.
+    - Response body property data types
+
+
+          {
                 "city": "string",
                 "temperature": "decimal",
                 "weather_description": "string",
                 "timestamp": "Y-m-d H:i:s",
                 "source": "external | cache"
-         }
+          }
 
 
 External References
