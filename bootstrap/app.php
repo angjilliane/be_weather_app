@@ -35,7 +35,7 @@ return Application::configure(basePath: dirname(__DIR__))
                 return response()->json([
                     'message' => 'Validation Error!',
                     'error' => $e->getMessage(),
-                ], $e->getCode() ?: 503);
+                ], $e->getCode() ?: 422);
                 return null;
             }
 
