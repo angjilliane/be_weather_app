@@ -1,0 +1,64 @@
+{
+  "info": {
+    "_postman_id": "fdc98c4f-389e-4931-94a2-7fea451079d3",
+    "name": "be-weather-app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "5097313"
+  },
+  "item": [
+    {
+      "name": "Weather",
+      "item": [
+        {
+          "name": "Current weather by city name",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/weather/manila",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "weather",
+                "manila"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Cached weather by city name",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/weather/manila/cached",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "weather",
+                "manila",
+                "cached"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
