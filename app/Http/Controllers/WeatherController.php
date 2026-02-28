@@ -51,7 +51,7 @@ class WeatherController extends Controller
             new OpenWeatherProvider()
         );
     
-        $service = new \App\Services\WeatherService($provider);
+        $service = new WeatherService($provider);
     
         return response()->json(
             $service->getWeather($city)
